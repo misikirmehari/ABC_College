@@ -8,8 +8,54 @@
 
 require 'populator'
 
-[Section, Professor, Student , Course].each(&:delete_all)
+[Section, Professor, Student, Course].each(&:delete_all)
 
+# Create Professors
+professors = (1..10).to_a.map do |n|
+  name = FFaker::Name.name
+  email = FFaker::Internet.email
+
+  Professor.create!(
+    name: name,
+    email: email
+  )
+end
+
+# Create Students
+100.times do |n|
+  name = FFaker::Name.name
+  email = FFaker::Internet.email
+
+  student = Student.create!(
+    name: name,
+    email: email
+  )
+
+  student.sections.create(
+    professor: professors[0]
+  )
+
+  student.sections.create(
+    professor: professors[rand(professors.size)]
+  )
+
+end
+
+# Create Courses
+
+10.times do |n|
+  name = FFaker::Education.major
+  course = Course.create!(
+    name: name
+  )
+  course.sections.create(
+
+  )
+
+end
+
+
+=begin
 Professor.populate 10 do |professor|
   professor.name = FFaker::Name.name
   professor.email   = FFaker::Internet.email
@@ -19,12 +65,32 @@ end
 Student.populate 100 do |student|
   student.name = FFaker::Name.name
   student.email   = FFaker::Internet.email
+
+  student.sections.create(
+    Professor: professors[0]
+  )
+
+  student.sections.create(
+                    Professor: Section[rand(sect)]
+  )
 end
 
 Course.populate 15 do |course|
   course.name = FFaker::Education.major
 
+  course.sections.create()
+
+
+
 end
+=end
+
+
+
+
+
+
+
 
 
 

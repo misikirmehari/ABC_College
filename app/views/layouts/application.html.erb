@@ -31,9 +31,11 @@
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li><%= link_to 'Students',students_path%></li>
-          <li><%= link_to 'Professors',professors_path %></li>
-          <li><%= link_to 'Courses',courses_path %></li>
+
+          <li><%= link_to 'STUDENTS',students_path%></li>
+          <li><%= link_to 'PROFESSORS',professors_path %></li>
+          <li><%= link_to 'COURSES',courses_path %></li>
+
         </ul>
       </div>
     </div>
@@ -45,7 +47,8 @@
         <%= msg %>
       <% end %>
     <% end %>
-
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
 </body>

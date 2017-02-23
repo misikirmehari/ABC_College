@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'static_pages#index'
+
   resources :professors
   resources :courses
   resources :students

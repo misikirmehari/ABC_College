@@ -5,6 +5,13 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Add Bootstrap to Project
+gem 'bootstrap-generators'
+
+
+# Add Faker to Project
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -43,6 +50,7 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'factory_girl_rails'
+  gem 'ffaker'
 end
 
 group :test do

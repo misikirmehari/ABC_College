@@ -4,12 +4,10 @@ RSpec.describe "professors/index", type: :view do
   before(:each) do
     assign(:professors, [
       Professor.create!(
-        :professor => "Professor",
         :name => "Name",
         :email => "Email"
       ),
       Professor.create!(
-        :professor => "Professor",
         :name => "Name",
         :email => "Email"
       )
@@ -18,7 +16,6 @@ RSpec.describe "professors/index", type: :view do
 
   it "renders a list of professors" do
     render
-    assert_select "tr>td", :text => "Professor".to_s, :count => 2
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => "Email".to_s, :count => 2
   end

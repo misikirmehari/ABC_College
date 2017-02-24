@@ -1,11 +1,19 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Students</h1>
 <%= form_tag(students_path , method:'get') do %>
   <%= text_field_tag :search_field, params[:search] %>
   <%= submit_tag('Search') %>
 <% end %>
 
+<div class="navbar-default">
+  <p>
+    <%= link_to 'Create New Student', new_student_path %>
+  </p>
+
+</div>
+
+
+<div class="jumbotron">
 <table>
   <thead>
     <tr>
@@ -27,7 +35,6 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New Student', new_student_path %>
+<%= will_paginate @students %>

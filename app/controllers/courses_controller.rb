@@ -3,13 +3,16 @@ class CoursesController < ApplicationController
 
   # GET /courses
   # GET /courses.json
+
+
   def index
-    @courses = Course.all
+    @courses = Course.where(["name Like ?" ,"%#{params[:search]}%" ])
   end
 
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @course = Course.find_by(:name)
   end
 
   # GET /courses/new

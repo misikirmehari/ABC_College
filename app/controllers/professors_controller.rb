@@ -4,7 +4,7 @@ class ProfessorsController < ApplicationController
   # GET /professors
   # GET /professors.json
   def index
-    @professors = Professor.all
+    @professors = Professor.where(["name Like ?","%#{params[:search]}%"])
   end
 
   # GET /professors/1

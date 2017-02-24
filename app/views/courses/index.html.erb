@@ -2,6 +2,14 @@
 
 <h1>Courses</h1>
 
+<!-- Used TO ADD SEARCH text field and button to courses index page -->
+
+<%= form_tag(courses_path, method:'get') do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag('Search') %>
+<% end %>
+
+
 <table>
   <thead>
     <tr>

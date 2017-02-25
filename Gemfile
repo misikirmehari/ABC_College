@@ -14,7 +14,7 @@ gem 'bootstrap-generators'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -49,6 +49,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'factory_girl_rails'
   gem 'ffaker'
+  gem 'sqlite3'
   gem 'populator'
 end
 
@@ -73,3 +74,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'will_paginate', '~> 3.1.0'
+
+group :production do
+  gem 'pg'
+end

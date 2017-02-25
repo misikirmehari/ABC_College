@@ -9,7 +9,13 @@
   <%= submit_tag('Search') %>
 <% end %>
 
+<div class="navbar-default">
+  <p>
+    <%= link_to 'Create New Course', new_course_path %>
+  </p>
+</div>
 
+<diV class="jumbotron">
 <table>
   <thead>
     <tr>
@@ -29,7 +35,12 @@
     <% end %>
   </tbody>
 </table>
-
+</diV>
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<!-- Allow paginaton In view -->
+<div class="digg_pagination">
+  <%= will_paginate @courses, :container => false %>
+</div>
+
+

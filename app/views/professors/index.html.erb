@@ -6,7 +6,13 @@
   <%= submit_tag('Search') %>
   <% end %>
 
+<div class="navbar-default">
+  <p>
+    <%= link_to 'Create New Professor', new_professor_path %>
+  </p>
 
+</div>
+<div class="jumbotron">
 <table>
   <thead>
     <tr>
@@ -29,7 +35,11 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Professor', new_professor_path %>
+<!-- Allow paginaton In view -->
+<div class="digg_pagination">
+  <%= will_paginate @professors, :container => false %>
+</div>
+

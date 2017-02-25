@@ -7,6 +7,7 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.where(["name Like ?" ,"%#{params[:search]}%" ])
+    @courses = Course.all.paginate(:page => params[:page])
   end
 
   # GET /courses/1

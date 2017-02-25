@@ -37,4 +37,9 @@
 </table>
 </div>
 <br>
-<%= will_paginate @students %>
+
+<!-- Allow paginaton In view -->
+<div class="digg_pagination">
+  <%= will_paginate @students, :container => false %>
+</div>
+

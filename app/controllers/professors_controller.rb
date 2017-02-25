@@ -5,6 +5,7 @@ class ProfessorsController < ApplicationController
   # GET /professors.json
   def index
     @professors = Professor.where(["name Like ?","%#{params[:search]}%"])
+    @professors = Professor.all.paginate(:page => params[:page])
   end
 
   # GET /professors/1

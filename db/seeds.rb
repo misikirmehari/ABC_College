@@ -11,7 +11,7 @@ require 'populator'
 [Section, Professor, Student, Course].each(&:delete_all)
 
 # Create Professors
-professors = (1..10).to_a.map do |n|
+professors = (1..30).to_a.map do |n|
   name = FFaker::Name.name
   email = FFaker::Internet.email
 
@@ -43,7 +43,7 @@ end
 
 # Create Courses
 
-10.times do |n|
+20.times do |n|
   name = FFaker::Education.major
   course = Course.create!(
     name: name

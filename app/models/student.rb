@@ -3,4 +3,7 @@ class Student < ApplicationRecord
   has_many :sections
   has_many :professors , :through => :sections
 
+  def self.per_page
+    10
+  end
 end

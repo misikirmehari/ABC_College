@@ -8,7 +8,8 @@ end
 # Add Bootstrap to Project
 gem 'bootstrap-generators'
 
-
+# Add Pagination to Application
+gem 'will_paginate', '~> 3.1.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -73,7 +74,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem 'will_paginate', '~> 3.1.0'
+
 
 group :production do
   gem 'pg'

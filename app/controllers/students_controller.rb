@@ -4,7 +4,6 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-
     @students = Student.where(["name Like ?","% #{params[:search]}%"])
     @students = Student.all.paginate(:page => params[:page])
 

@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ABC College Registrar
 
-Things you may want to cover:
+#### Versions:
+Ruby  2.3.1
 
-* Ruby version
+Rails 5.0.1
 
-* System dependencies
+#### Features:
 
-* Configuration
+A guest can view, an authenticated user can create,update and delete
 
-* Database creation
+#### Usage:
 
-* Database initialization
+  Clone the Repo locally 
+  
+  cd into that directory
+  
+    bundle
+    
+    rails db:migrate db:seed
+    
+    rails s
 
-* How to run the test suite
+  Visit your copy at http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
+Note: To check it out in action, visit https://abc-college-registrar.herokuapp.com.
 
-* Deployment instructions
+#### Additional Gems Used
 
-* ...
+'ffaker' 'will_paginate' 'rspec-rails' 'factory_girl_rails' 'guard-rspec' 'devise'  'guard-bundler' 'capybara' 'shoulda-matchers' 'rails_12factor' 'bootstrap-generators’ 'pg' # for production only

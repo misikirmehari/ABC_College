@@ -7,14 +7,13 @@ class CoursesController < ApplicationController
 
 
   def index
-    @courses = Course.where(["name Like ?" ,"%#{params[:search]}%" ])
+    @courses = Course.where(["name Like ?", "%#{params[:search]}%"])
     @courses = Course.all.paginate(:page => params[:page])
   end
 
   # GET /courses/1
   # GET /courses/1.json
   def show
-    @course = Course.find_by(:name)
   end
 
   # GET /courses/new
@@ -67,13 +66,13 @@ class CoursesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_course
-      @course = Course.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_course
+    @course = Course.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def course_params
-      params.require(:course).permit(:name)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def course_params
+    params.require(:course).permit(:name)
+  end
 end

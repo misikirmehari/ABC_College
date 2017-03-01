@@ -62,6 +62,10 @@ ActiveRecord::Schema.define(version: 20170223113748) do
     t.index ["student_id"], name: "index_sections_on_student_id"
   end
 =end
+<<<<<<< ef2cd915a4d07c6e03b3dc735b3dcfea321d0df6
+=======
+
+>>>>>>> Updated GemFile and Schema 
 
 
 end

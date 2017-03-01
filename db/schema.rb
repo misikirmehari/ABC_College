@@ -49,6 +49,8 @@ ActiveRecord::Schema.define(version: 20170223113748) do
     t.datetime "updated_at", null: false
   end
 
+
+=begin
   create_table "sections", force: :cascade do |t|
     t.integer "student_id"
     t.integer "professor_id"
@@ -59,6 +61,8 @@ ActiveRecord::Schema.define(version: 20170223113748) do
     t.index ["professor_id"], name: "index_sections_on_professor_id"
     t.index ["student_id"], name: "index_sections_on_student_id"
   end
+=end
+
 
 
 end
